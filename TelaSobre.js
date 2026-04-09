@@ -30,7 +30,7 @@ export default function TelaSobre({ aoVoltar }) {
       </View>
 
       <TouchableOpacity style={styles.botaoVoltar} onPress={aoVoltar}>
-        <Text style={styles.textoBotao}>VOLTAR AO MENU</Text>
+        <Text style={styles.textoBotao}>VOLTAR AO INÍCIO</Text>
       </TouchableOpacity>
 
     </View>

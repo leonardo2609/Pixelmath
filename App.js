@@ -4,6 +4,8 @@ import { useFonts } from 'expo-font';
 
 import TelaInicial from './TelaInicial';
 import TelaSobre from './TelaSobre';
+import Menu from './Menu';
+
 
 export default function App() {
   const [telaAtual, setTelaAtual] = useState('HOME');
@@ -17,17 +19,31 @@ export default function App() {
     return null;
   }
 
-  return (
-    <View style={styles.container}>
-      <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
-      
-      {telaAtual === 'HOME' ? (
-        <TelaInicial aoClicarNoSobre={() => setTelaAtual('SOBRE')} />
-      ) : (
-        <TelaSobre aoVoltar={() => setTelaAtual('HOME')} />
-      )}
-    </View>
-  );
+ return (
+  <View style={styles.container}>
+    <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
+
+    {telaAtual === 'HOME' && (
+      <TelaInicial 
+        aoIniciar={() => setTelaAtual('MENU')}
+        aoClicarNoSobre={() => setTelaAtual('SOBRE')}
+      />
+    )}
+
+    {telaAtual === 'SOBRE' && (
+      <TelaSobre aoVoltar={() => setTelaAtual('HOME')} />
+    )}
+
+    {telaAtual === 'MENU' && (
+      <Menu 
+        aoVoltar={() => setTelaAtual('HOME')}
+        abrirJogoTorre={() => setTelaAtual('JOGO DA TORRE')}
+        abrirJogoRei={() => setTelaAtual('JOGO DO REI')}
+      />
+    )}
+
+  </View>
+);
 }
 
 const styles = StyleSheet.create({
