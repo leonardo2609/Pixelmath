@@ -14,7 +14,7 @@ export default function Menu({ aoVoltar, abrirJogoTorre, abrirJogoRei }) {
                     onPress={() => abrirJogoTorre && abrirJogoTorre()}
                 >
                     <Image 
-                        source={require('./assets/iconeTorre.png')}
+                        source={require('../assets/iconeTorre.png')}
                         style={styles.imagemBotao}
                     />
                     <Text style={styles.textoBotao}>JOGO DA TORRE</Text>
@@ -25,7 +25,7 @@ export default function Menu({ aoVoltar, abrirJogoTorre, abrirJogoRei }) {
                     onPress={() => abrirJogoRei && abrirJogoRei()}
                 >
                     <Image 
-                        source={require('./assets/iconeRei.png')}
+                        source={require('../assets/iconeRei.png')}
                         style={styles.imagemBotao}
                     />
                     <Text style={styles.textoBotao}>JOGO DO REI</Text>

@@ -5,7 +5,7 @@ export default function TelaInicial({ aoIniciar, aoClicarNoSobre }) {
   return (
     <View style={styles.container}>
       <ImageBackground 
-        source={require('./assets/pixelmath.png')} 
+        source={require('../assets/pixelmath.png')} //pixelmath.png
         style={styles.background}
         resizeMode="stretch"
       >

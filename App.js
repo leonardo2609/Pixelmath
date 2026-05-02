@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { View, StyleSheet, StatusBar } from 'react-native';
 import { useFonts } from 'expo-font';
 
-import TelaInicial from './TelaInicial';
-import TelaSobre from './TelaSobre';
-import Menu from './Menu';
+import TelaInicial from './Menu_inicial/TelaInicial.js'; //Menu_inicial\TelaInicial.js
+import TelaSobre from './Menu_inicial/TelaSobre';
+import Menu from './Menu_inicial/Menu.js';
 
 
 export default function App() {
